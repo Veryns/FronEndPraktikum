@@ -1,4 +1,12 @@
-export const team = [
+export type TeamMember = {
+  id: string;
+  name: string;
+  role: string;
+  bio: string;
+  skills: string[];
+};
+
+export const team: TeamMember[] = [
   {
     id: "zero-two",
     name: "Zero Two",
@@ -29,6 +37,6 @@ export const team = [
   },
 ];
 
-export function getMemberById(id) {
+export function getMemberById(id: string): TeamMember | undefined {
   return team.find((m) => m.id === id);
 }

@@ -1,4 +1,9 @@
-export default function PageHeader({ title, subtitle }) {
+type Props = {
+  title: string;
+  subtitle?: string;
+};
+
+export default function PageHeader({ title, subtitle }: Props) {
   return (
     <section className="page-header">
       <div className="container">

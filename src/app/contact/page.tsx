@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
 import { company } from "@/data/company";
 
-export const metadata = { title: "Kontak" };
+export const metadata: Metadata = { title: "Kontak" };
 
 export default function ContactPage() {
   return (

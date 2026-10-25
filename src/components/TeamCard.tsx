@@ -1,7 +1,12 @@
 import Link from "next/link";
 import Avatar from "./Avatar";
+import type { TeamMember } from "@/data/team";
 
-export default function TeamCard({ member }) {
+type Props = {
+  member: TeamMember;
+};
+
+export default function TeamCard({ member }: Props) {
   return (
     <article className="card team-card">
       <Avatar member={member} />

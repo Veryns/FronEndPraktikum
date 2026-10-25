@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import ServiceCard from "@/components/ServiceCard";
 import { services } from "@/data/services";
 
-export const metadata = { title: "Layanan" };
+export const metadata: Metadata = { title: "Layanan" };
 
 export default function ServicesPage() {
   return (

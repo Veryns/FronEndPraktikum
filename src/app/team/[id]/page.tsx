@@ -1,20 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import PageHeader from "@/components/PageHeader";
 import Avatar from "@/components/Avatar";
 import { team, getMemberById } from "@/data/team";
 
+type Props = {
+  params: Promise<{ id: string }>;
+};
+
 export function generateStaticParams() {
   return team.map((m) => ({ id: m.id }));
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const member = getMemberById(id);
   return { title: member ? member.name : "Anggota tidak ditemukan" };
 }
 
-export default async function TeamDetailPage({ params }) {
+export default async function TeamDetailPage({ params }: Props) {
   const { id } = await params;
   const member = getMemberById(id);
 

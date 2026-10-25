@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import type { TeamMember } from "@/data/team";
 
-export function getInitials(name) {
+export function getInitials(name: string): string {
   return name
     .split(" ")
     .map((w) => w[0])
@@ -10,7 +11,12 @@ export function getInitials(name) {
     .join("");
 }
 
-export default function Avatar({ member, large = false }) {
+type Props = {
+  member: TeamMember;
+  large?: boolean;
+};
+
+export default function Avatar({ member, large = false }: Props) {
   const [failed, setFailed] = useState(false);
   const cls = `avatar ${large ? "avatar-lg" : ""}`;
 

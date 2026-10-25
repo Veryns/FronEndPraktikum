@@ -1,4 +1,14 @@
-export const services = [
+export type Service = {
+  slug: string;
+  icon: string;
+  title: string;
+  summary: string;
+  description: string;
+  features: string[];
+  duration: string;
+};
+
+export const services: Service[] = [
   {
     slug: "web-development",
     icon: "🌐",
@@ -61,6 +71,6 @@ export const services = [
   },
 ];
 
-export function getServiceBySlug(slug) {
+export function getServiceBySlug(slug: string): Service | undefined {
   return services.find((s) => s.slug === slug);
 }

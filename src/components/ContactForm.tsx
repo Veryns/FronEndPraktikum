@@ -5,10 +5,10 @@ import { useState } from "react";
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSent(true);
-    e.target.reset();
+    e.currentTarget.reset();
   }
 
   return (

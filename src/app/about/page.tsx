@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import { company, timeline } from "@/data/company";
 
-export const metadata = { title: "Tentang Kami" };
+export const metadata: Metadata = { title: "Tentang Kami" };
 
 export default function AboutPage() {
   return (
