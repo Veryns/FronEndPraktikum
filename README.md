@@ -1,3 +1,7 @@
+##Umm itu ada prisma karna aku coba deploy pake projek ini dulu sebelum coba deploy yang projek UAS
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
